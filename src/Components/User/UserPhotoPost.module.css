@@ -1,0 +1,54 @@
+.photoPost {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.file {
+  display: none;
+}
+
+.preview {
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center center;
+}
+
+.preview::after {
+  content: '';
+  display: block;
+  height: 0px;
+  padding-bottom: 100%;
+}
+
+.imageSelection {
+  background: #eee;
+  border-radius: 0.2rem;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.imageSelection:hover,
+.imageSelection:focus {
+  background: white;
+  box-shadow: 0 0 0 3px #eee;
+  border-color: #333;
+  outline: none;
+}
+
+.imageSelection svg > * {
+  stroke: #333;
+  stroke-width: 1;
+}
+
+.imageSelection:hover svg > *,
+.imageSelection:focus svg > * {
+  stroke-width: 1.5;
+}
