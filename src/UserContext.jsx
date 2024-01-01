@@ -39,8 +39,7 @@ const UserStorage = ({ children }) => {
       const response = await fetch(url, options)
 
       if (!response.ok) {
-        const statusText = response.statusText || 'Verifique os dados e tente novamente'
-        throw new Error(`Erro: ${statusText}`)
+        throw new Error(`Erro: ${response.statusText}`)
       }
 
       const { token } = await response.json()
